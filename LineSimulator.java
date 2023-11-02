@@ -31,15 +31,15 @@ public class LineSimulator {
                 customer++;
                 line.add(customer);
             }
-            if (time % 12 == 0) {
+            if (time % 12 == 0 && !line.isEmpty()) {
                 System.out.println("Cashier 1 served customer " + line.remove());
                 customersServed++;
             }
-            if (time % 19 == 0) {
+            if (time % 19 == 0 && !line.isEmpty()) {
                 System.out.println("Cashier 2 served customer " + line.remove());
                 customersServed++;
             }
-            if (time % 25 == 0) {
+            if (time % 25 == 0 && !line.isEmpty()) {
                 System.out.println("Cashier 3 served customer " + line.remove());
                 customersServed++;
             }
@@ -88,7 +88,7 @@ public class LineSimulator {
                 } else {
                     c3.add(customer);
                 }
-            }
+            }   `
             if (time % 12 == 0 && !c1.isEmpty()) {
                 System.out.println("Cashier 1 served customer " + c1.remove());
                 customersServed++;
@@ -115,7 +115,6 @@ public class LineSimulator {
         
         singleLineSim(totalCustomers);
         threeLineSim(totalCustomers);
-
     }
 }
     
